@@ -10,118 +10,63 @@ OptiBus is an intelligent school bus routing system that optimizes school transp
 
 https://optibus-demo.onrender.com/
 
-> **Note:** The application is hosted on Render's free tier. If the service has been idle, the first launch may take around one minute while the server starts. :contentReference[oaicite:0]{index=0}
+> **Note:** The application is hosted on Render's free tier. If the service has been idle, the first launch may take around one minute while the server starts.
 
 ---
 
 # 🇺🇸 How to Use
 
-Using the system is very simple:
-
 ### 1. Open the demo
 Visit the live demo using the link above.
 
-### 2. Upload your merged student CSV file
-The file should contain:
-- Student information
-- School location
-- Distance matrix
-- Time matrix
+### 2. Upload the sample dataset
+A sample CSV file is included in this repository for testing.
 
-### 3. Generate buses
-Click **Generate Buses**.
+Simply upload the provided sample dataset into the application.
 
-The system will:
-- Cluster students automatically.
-- Determine the optimal number of buses.
-- Display the number of students assigned to each bus.
+### 3. Click **Generate Buses**
+The system will automatically:
+- Cluster students into buses.
+- Determine the required number of buses.
+- Display the generated bus assignments.
 
 ### 4. Select a bus
-Choose the bus you want to optimize.
+Choose any generated bus.
 
-### 5. Select students
-Keep all students selected, or remove absent students if needed.
-
-### 6. Generate routes
-Click **Generate Routes**.
-
+### 5. Click **Generate Routes**
 The system will generate:
 - Morning route
 - Afternoon route
-- Route map
+- Interactive map
 - Route statistics
 - Estimated arrival times (ETA)
 
-### 7. Notifications
-The system can generate ETA information that can be used for WhatsApp parent notifications.
-
 ---
 
-# 🇸🇦 طريقة الاستخدام
-
-استخدام النظام بسيط جدًا:
+# طريقة الاستخدام
 
 ### ١. افتح الموقع
-ادخل على الرابط الموجود بالأعلى.
+ادخل على رابط المشروع.
 
-### ٢. ارفع ملف الطلاب
-قم برفع ملف CSV الذي يحتوي على:
-- بيانات الطلاب
-- موقع المدرسة
-- مصفوفة المسافات
-- مصفوفة أزمنة الرحلات
+### ٢. ارفع ملف البيانات التجريبي
+يوجد ملف CSV تجريبي داخل المستودع، قم برفعه في النظام لتجربة المشروع.
 
-### ٣. تجهيز الباصات
-اضغط على زر **Generate Buses**.
-
+### ٣. اضغط على **Generate Buses**
 سيقوم النظام تلقائيًا بـ:
 - توزيع الطلاب على الباصات.
 - تحديد العدد المناسب من الباصات.
-- عرض عدد الطلاب في كل باص.
+- عرض الباصات الناتجة.
 
-### ٤. اختر الباص
+### ٤. اختر أي باص
 اختر الباص الذي تريد إنشاء مساره.
 
-### ٥. اختر الطلاب
-يمكنك الإبقاء على جميع الطلاب أو إزالة الطلاب الغائبين.
-
-### ٦. إنشاء المسارات
-اضغط على **Generate Routes**.
-
-سيقوم النظام بعرض:
+### ٥. اضغط على **Generate Routes**
+سيعرض النظام:
 - مسار الذهاب.
 - مسار العودة.
-- الخريطة.
+- الخريطة التفاعلية.
 - إحصائيات الرحلة.
-- الوقت المتوقع لوصول كل طالب (ETA).
-
-### ٧. الإشعارات
-يمكن استخدام بيانات ETA لإرسال إشعارات واتساب لأولياء الأمور.
-
----
-
-## ✨ Features
-
-- AI-based student clustering
-- PPO-based DRL-ALNS route optimization
-- Morning & afternoon route planning
-- Interactive route visualization
-- ETA estimation
-- WhatsApp notification support
-- User-friendly web interface
-
----
-
-## 🛠 Technologies
-
-- Python
-- Gradio
-- Stable-Baselines3 (PPO)
-- Gymnasium
-- Scikit-learn
-- Folium
-- Pandas
-- NumPy
+- الوقت المتوقع للوصول (ETA).
 
 ---
 
