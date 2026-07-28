@@ -7,8 +7,6 @@ gradio==5.49.1
 pandas==2.2.3
 numpy==1.26.4
 scikit-learn==1.6.1
-scipy==1.15.2
-matplotlib==3.10.1
 folium==0.19.5
 requests==2.32.3
 twilio==9.5.2
