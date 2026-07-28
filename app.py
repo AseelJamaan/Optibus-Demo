@@ -2453,13 +2453,8 @@ with gr.Blocks(theme=premium_theme, css=PREMIUM_CSS, title="SmartBus") as demo:
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 7860))
-
-    demo.queue()
-
     demo.launch(
         server_name="0.0.0.0",
-        server_port=port,
-        share=False,
+        server_port=int(os.environ.get("PORT", 10000)),
         show_error=True
     )
