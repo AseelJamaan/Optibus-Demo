@@ -1,127 +1,130 @@
-# 🚍 OptiBus – AI-Based Smart School Bus Routing System
+# 🚌 OptiBus – AI-Based School Bus Routing System
 
-OptiBus is an AI-powered school bus routing system designed to optimize bus routes, reduce travel time and fuel consumption, and improve transportation efficiency while ensuring a safer and smarter experience for students and parents.
-
-Developed as our graduation project for the Bachelor's degree in Artificial Intelligence at the University of Jeddah.
+OptiBus is an intelligent school bus routing system that optimizes school transportation using Artificial Intelligence. The system automatically groups students into buses, generates optimized morning and afternoon routes using a PPO-based DRL-ALNS model, and estimates student arrival times.
 
 ---
 
-## ✨ Key Features
+## 🌐 Live Demo
 
-- 🧠 AI-powered route optimization using DRL-ALNS (PPO)
-- 📍 Student clustering using K-Means++
-- 🚌 Capacity-aware bus assignment
-- ⏱️ ETA prediction for each student
-- 🗺️ Interactive route visualization
-- 📱 WhatsApp parent notification system
-- 🌅 Morning & afternoon route planning
-- ⚡ Optimized travel time and fuel consumption
+🔗 **Open the application:**
+
+https://optibus-demo.onrender.com/
+
+> **Note:** The application is hosted on Render's free tier. If the service has been idle, the first launch may take around one minute while the server starts. :contentReference[oaicite:0]{index=0}
 
 ---
 
-## 🛠️ Technologies Used
+# 🇺🇸 How to Use
+
+Using the system is very simple:
+
+### 1. Open the demo
+Visit the live demo using the link above.
+
+### 2. Upload your merged student CSV file
+The file should contain:
+- Student information
+- School location
+- Distance matrix
+- Time matrix
+
+### 3. Generate buses
+Click **Generate Buses**.
+
+The system will:
+- Cluster students automatically.
+- Determine the optimal number of buses.
+- Display the number of students assigned to each bus.
+
+### 4. Select a bus
+Choose the bus you want to optimize.
+
+### 5. Select students
+Keep all students selected, or remove absent students if needed.
+
+### 6. Generate routes
+Click **Generate Routes**.
+
+The system will generate:
+- Morning route
+- Afternoon route
+- Route map
+- Route statistics
+- Estimated arrival times (ETA)
+
+### 7. Notifications
+The system can generate ETA information that can be used for WhatsApp parent notifications.
+
+---
+
+# 🇸🇦 طريقة الاستخدام
+
+استخدام النظام بسيط جدًا:
+
+### ١. افتح الموقع
+ادخل على الرابط الموجود بالأعلى.
+
+### ٢. ارفع ملف الطلاب
+قم برفع ملف CSV الذي يحتوي على:
+- بيانات الطلاب
+- موقع المدرسة
+- مصفوفة المسافات
+- مصفوفة أزمنة الرحلات
+
+### ٣. تجهيز الباصات
+اضغط على زر **Generate Buses**.
+
+سيقوم النظام تلقائيًا بـ:
+- توزيع الطلاب على الباصات.
+- تحديد العدد المناسب من الباصات.
+- عرض عدد الطلاب في كل باص.
+
+### ٤. اختر الباص
+اختر الباص الذي تريد إنشاء مساره.
+
+### ٥. اختر الطلاب
+يمكنك الإبقاء على جميع الطلاب أو إزالة الطلاب الغائبين.
+
+### ٦. إنشاء المسارات
+اضغط على **Generate Routes**.
+
+سيقوم النظام بعرض:
+- مسار الذهاب.
+- مسار العودة.
+- الخريطة.
+- إحصائيات الرحلة.
+- الوقت المتوقع لوصول كل طالب (ETA).
+
+### ٧. الإشعارات
+يمكن استخدام بيانات ETA لإرسال إشعارات واتساب لأولياء الأمور.
+
+---
+
+## ✨ Features
+
+- AI-based student clustering
+- PPO-based DRL-ALNS route optimization
+- Morning & afternoon route planning
+- Interactive route visualization
+- ETA estimation
+- WhatsApp notification support
+- User-friendly web interface
+
+---
+
+## 🛠 Technologies
 
 - Python
 - Gradio
 - Stable-Baselines3 (PPO)
 - Gymnasium
+- Scikit-learn
+- Folium
 - Pandas
 - NumPy
-- Scikit-learn
-- Folium
-- Matplotlib
-- Requests
-- Twilio API
 
 ---
 
-## 🚀 Live Demo
+## 📄 Research
 
-Coming Soon
-
-*(The application will be deployed online shortly.)*
-
----
-
-## 📂 How to Run Locally
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/Optibus-Demo.git
-```
-
-2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the application
-
-```bash
-python app.py
-```
-
-4. Open your browser
-
-```
-http://127.0.0.1:7860
-```
-
----
-
-## 📸 System Workflow
-
-1. Upload student dataset.
-2. Cluster students into buses.
-3. Optimize routes using DRL-ALNS.
-4. Generate interactive maps.
-5. Calculate ETA.
-6. Notify parents.
-
----
-
-## 📖 About the Project
-
-This project was developed as our graduation project in the Artificial Intelligence program at the University of Jeddah.
-
-The proposed system combines Artificial Intelligence, Deep Reinforcement Learning, and route optimization techniques to provide an intelligent school transportation solution.
-
----
-
-# 🇸🇦 النسخة العربية
-
-## 🚍 OptiBus
-
-هو نظام ذكي لإدارة وتحسين مسارات الحافلات المدرسية باستخدام تقنيات الذكاء الاصطناعي والتعلم المعزز العميق بهدف:
-
-- تقليل زمن الرحلات.
-- تقليل استهلاك الوقود.
-- توزيع الطلاب على الحافلات بطريقة ذكية.
-- حساب وقت الوصول المتوقع (ETA).
-- عرض المسارات على خرائط تفاعلية.
-- إرسال إشعارات لأولياء الأمور عبر واتساب.
-
-تم تطوير المشروع كمشروع تخرج ضمن برنامج بكالوريوس الذكاء الاصطناعي بجامعة جدة.
-
----
-
-## ⚙️ التقنيات المستخدمة
-
-- Python
-- Gradio
-- PPO
-- Stable-Baselines3
-- K-Means++
-- Folium
-- Pandas
-- Scikit-learn
-- Twilio API
-
----
-
-## 📄 ملاحظات
-
-- البيانات الموجودة داخل المشروع مخصصة للتجربة فقط.
-- لا يحتوي المستودع على بيانات حقيقية للطلاب.
+This project was developed as part of our Bachelor's Graduation Project in Artificial Intelligence at the University of Jeddah.
