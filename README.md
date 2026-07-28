@@ -68,8 +68,4 @@ The system will generate:
 - إحصائيات الرحلة.
 - الوقت المتوقع للوصول (ETA).
 
----
 
-## 📄 Research
-
-This project was developed as part of our Bachelor's Graduation Project in Artificial Intelligence at the University of Jeddah.
