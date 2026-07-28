@@ -1,11 +1,14 @@
-gradio
-numpy
-pandas
-gymnasium
-stable-baselines3
-scikit-learn
-matplotlib
-requests
-folium
-twilio
-torch
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch==2.5.1+cpu
+stable-baselines3==2.5.0
+gymnasium==1.0.0
+gradio==5.49.1
+pandas==2.2.3
+numpy==1.26.4
+scikit-learn==1.6.1
+scipy==1.15.2
+matplotlib==3.10.1
+folium==0.19.5
+requests==2.32.3
+twilio==9.5.2
