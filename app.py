@@ -8,8 +8,6 @@ import pandas as pd
 import gymnasium as gym
 from gymnasium import spaces
 
-from stable_baselines3 import PPO
-
 
 
 class BusRoutingAlnsEnv(gym.Env):
@@ -920,7 +918,6 @@ import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score, calinski_harabasz_score, davies_bouldin_score
 from sklearn.preprocessing import StandardScaler
-import matplotlib.pyplot as plt
 from math import ceil, floor
 import random, math
 import requests
@@ -1231,10 +1228,21 @@ MODEL_PATH = os.path.join(
     "ppo_bus_alns_shared.zip"
 )
 
-ppo_model = PPO.load(
-    MODEL_PATH,
-    device="cpu"
-)
+ppo_model = None
+
+
+def get_ppo_model():
+    global ppo_model
+
+    if ppo_model is None:
+        from stable_baselines3 import PPO
+
+        ppo_model = PPO.load(
+            MODEL_PATH,
+            device="cpu"
+        )
+
+    return ppo_model
 
 def run_routing(bus_id, selected_students, df_full, df_students):
     if df_full is None or df_students is None:
@@ -1305,9 +1313,9 @@ def run_routing(bus_id, selected_students, df_full, df_students):
     # ============================================================
     # Apply Saved PPO-based DRL-ALNS Model
     # ============================================================
-
+    model = get_ppo_model()
     drl_results = env_drl_alns.run_best_all_clusters(
-        model=ppo_model,
+        model=model,
         episodes_per_cluster=5,
         deterministic=True
     )
