@@ -1,6 +1,7 @@
---extra-index-url https://download.pytorch.org/whl/cpu
+--index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://pypi.org/simple
 
-torch==2.5.1+cpu
+torch==2.5.1
 stable-baselines3==2.5.0
 gymnasium==1.0.0
 gradio==5.49.1
