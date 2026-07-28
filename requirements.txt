@@ -1,0 +1,11 @@
+gradio
+numpy
+pandas
+gymnasium
+stable-baselines3
+scikit-learn
+matplotlib
+requests
+folium
+twilio
+torch
