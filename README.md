@@ -14,7 +14,7 @@ https://optibus-demo.onrender.com/
 
 ---
 
-# 🇺🇸 How to Use
+# How to Use
 
 ### 1. Open the demo
 Visit the live demo using the link above.
